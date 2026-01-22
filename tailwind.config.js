@@ -1,0 +1,19 @@
+module.exports = {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./projets.html",
+    "./a-propos.html",
+    "./contact.html",
+    "./cv.html",
+    "./competences.html",
+    "./veille.html",
+    "./epreuves.html",
+    "./debouches.html",
+    "./scripts/**/*.js"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
