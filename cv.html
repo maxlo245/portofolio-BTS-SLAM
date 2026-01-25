@@ -13,11 +13,12 @@
             <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO</span>
             <ul class="flex space-x-6">
                 <li><a href="index.html" class="navlink">Accueil</a></li>
+                <li><a href="parcours.html" class="navlink">Parcours</a></li>
                 <li><a href="projets.html" class="navlink">Projets</a></li>
-                <li><a href="a-propos.html" class="navlink">À propos</a></li>
                 <li><a href="competences.html" class="navlink">Compétences</a></li>
                 <li><a href="cv.html" class="navlink">CV</a></li>
                 <li><a href="veille.html" class="navlink">Veille</a></li>
+                <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
                 <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
                 <li><a href="debouches.html" class="navlink">Débouchés</a></li>
                 <li><a href="contact.html" class="navlink">Contact</a></li>
@@ -29,11 +30,11 @@
             <!-- Effets de fond immersifs supprimés pour un rendu droit et professionnel -->
         </div>
         <div class="relative z-10 bg-white/80 rounded-3xl shadow-2xl border border-blue-100 p-12 max-w-2xl w-full flex flex-col items-center gap-8 animate-fade-in-up">
-            <h1 class="text-4xl font-black text-gray-900 dark:text-white drop-shadow-lg text-center">Mon CV</h1>
-            <a href="cv.pdf" download class="group relative inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-200 animate-fade-in-up delay-400">
-                <span class="relative z-10">Télécharger le CV (PDF)</span>
-                <span class="absolute inset-0 rounded-full bg-white/10 dark:bg-gray-700/30 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
-            </a>
+                <h1 class="text-4xl font-black text-gray-900 dark:text-white drop-shadow-lg text-center">Mon CV</h1>
+                <div class="flex flex-col items-center justify-center w-full h-full">
+                    <embed src="CV_2026-01-25_Maxime_LAURENT.pdf" type="application/pdf" width="100%" height="700px" style="border:none;" />
+                    <p class="mt-4 text-center text-gray-700 dark:text-gray-300">Si le PDF ne s'affiche pas, <a href="CV_2026-01-25_Maxime_LAURENT.pdf" target="_blank" class="underline text-blue-600">cliquez ici pour le télécharger</a>.</p>
+                </div>
             <section class="w-full">
                 <h2 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-2">Expérience professionnelle</h2>
                 <ul class="list-disc list-inside text-blue-700 dark:text-blue-300 text-lg mb-4">
@@ -43,19 +44,24 @@
                 <h2 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-2">Formations</h2>
                 <ul class="list-disc list-inside text-blue-700 dark:text-blue-300 text-lg mb-4">
                     <li>2024-2026 : BTS SIO option SLAM</li>
-                    <li>2022-2024 : Bac STI2D</li>
+                    <li>2022-2024 : Bac STMG</li>
                 </ul>
                 <h2 class="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-2">Compétences principales</h2>
                 <ul class="list-disc list-inside text-blue-700 dark:text-blue-300 text-lg">
                     <li>Développement web (HTML, CSS, JS, PHP, SQL)</li>
-                    <li>Frameworks : Tailwind, Bootstrap, Laravel</li>
                     <li>Gestion de projet, travail en équipe</li>
                 </ul>
             </section>
         </div>
     </main>
     <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-center py-6 shadow-inner backdrop-blur-xl">
-        <p class="font-light">&copy; 2026 Mon Nom — Portfolio BTS SIO SLAM</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+            <span class="font-light">&copy; 2026 Portfolio BTS SIO SLAM</span>
+            <a href="mentions-legales.html" class="underline hover:text-blue-600">Mentions légales</a>
+            <a href="mailto:maximelaurent090@gmail.com" class="underline hover:text-blue-600">maximelaurent090@gmail.com</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="underline hover:text-blue-600">Instagram</a>
+            <a href="politique-confidentialite.html" class="underline hover:text-blue-600">Politique de confidentialité</a>
+        </div>
     </footer>
     <style>
         .navlink {

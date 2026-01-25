@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <script>
+            if (localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - À propos</title>
+    <title>Parcours scolaire - Portfolio BTS SIO SLAM</title>
     <link rel="stylesheet" href="styles/main.css">
-
 </head>
 <body>
     <button id="dark-toggle" class="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" style="z-index:9999; display:block;">🌙 Mode sombre</button>
@@ -16,7 +23,6 @@
                 <li><a href="index.html" class="navlink">Accueil</a></li>
                 <li><a href="parcours.html" class="navlink">Parcours</a></li>
                 <li><a href="projets.html" class="navlink">Projets</a></li>
-                <li><a href="a-propos.html" class="navlink">À propos</a></li>
                 <li><a href="competences.html" class="navlink">Compétences</a></li>
                 <li><a href="cv.html" class="navlink">CV</a></li>
                 <li><a href="veille.html" class="navlink">Veille</a></li>
@@ -27,16 +33,38 @@
             </ul>
         </nav>
     </header>
-    <main class="relative min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 overflow-hidden flex flex-col items-center justify-center py-16">
-        <div class="absolute inset-0 pointer-events-none">
-            <!-- Effets de fond immersifs supprimés pour un rendu droit et professionnel -->
-        </div>
-        <div class="relative z-10 bg-white/80 rounded-3xl shadow-2xl border border-blue-100 p-12 max-w-2xl w-full flex flex-col items-center gap-6 animate-fade-in-up">
-            <h1 class="text-4xl font-black text-gray-900 drop-shadow-lg text-center">À propos de moi</h1>
-            <p class="text-lg text-gray-700 text-center">Présentation personnelle à compléter...</p>
-        </div>
+    <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center gap-8 mt-24 mb-16">
+            <h1 class="text-6xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)] animate-fade-in-up text-center">Mon parcours scolaire</h1>
+            <div class="relative flex flex-col gap-12 timeline-modern w-full max-w-3xl px-4 items-center">
+                <div class="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-gradient-to-b from-blue-400 via-blue-200 to-blue-400 opacity-60 rounded-full pointer-events-none"></div>
+                <div class="timeline-item flex items-start gap-6 animate-fade-in-up w-full">
+                    <div class="timeline-dot mt-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900 shadow-lg z-10"></div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-300">2019–2021</h2>
+                        <div class="text-xl font-semibold text-gray-900 dark:text-white">Collège Pierre de Ronsard</div>
+                        <p class="text-lg text-gray-700 dark:text-gray-300">Cycle collège, développement des bases scolaires et personnelles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex items-start gap-6 animate-fade-in-up delay-200 w-full">
+                    <div class="timeline-dot mt-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900 shadow-lg z-10"></div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-300">2021–2024</h2>
+                        <div class="text-xl font-semibold text-gray-900 dark:text-white">Lycée François Mansard</div>
+                        <p class="text-lg text-gray-700 dark:text-gray-300">Baccalauréat STMG, spécialité gestion et management.</p>
+                    </div>
+                </div>
+                <div class="timeline-item flex items-start gap-6 animate-fade-in-up delay-400 w-full">
+                    <div class="timeline-dot mt-2 w-5 h-5 rounded-full bg-blue-600 border-4 border-white dark:border-gray-900 shadow-lg z-10"></div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-300">2024–présent</h2>
+                        <div class="text-xl font-semibold text-gray-900 dark:text-white">Ensemble Sainte Marie (option SLAM)</div>
+                        <p class="text-lg text-gray-700 dark:text-gray-300">BTS SIO option SLAM, développement et gestion de projets informatiques.</p>
+                    </div>
+                </div>
+            </div>
     </main>
-    <footer class="bg-white/80 border-t border-gray-200 text-gray-700 text-center py-6 shadow-inner backdrop-blur-xl">
+    <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-center py-6 shadow-inner backdrop-blur-xl">
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
             <span class="font-light">&copy; 2026 Portfolio BTS SIO SLAM</span>
             <a href="mentions-legales.html" class="underline hover:text-blue-600">Mentions légales</a>
@@ -45,7 +73,6 @@
             <a href="politique-confidentialite.html" class="underline hover:text-blue-600">Politique de confidentialité</a>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
     <style>
         .navlink {
             @apply text-gray-700 font-semibold px-2 py-1 rounded transition-all duration-300 hover:text-blue-600 hover:bg-blue-100 hover:shadow-md;
@@ -86,26 +113,14 @@
         .dark .text-gray-700, .dark .text-gray-900 {
             color: #e0e7ef !important;
         }
-        .dark .border-blue-100, .dark .border-gray-200 {
-            border-color: #334155 !important;
+        .dark .bg-gradient-to-r {
+            background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%) !important;
         }
-        .dark .border-blue-300, .dark .border-gray-700 {
-            border-color: #64748b !important;
+        .dark .bg-gradient-to-br {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%) !important;
         }
-        .dark input, .dark textarea {
-            background: #1e293b !important;
-            color: #e0e7ef !important;
-            border-color: #334155 !important;
-        }
-        .dark input:focus, .dark textarea:focus {
-            outline: 2px solid #38bdf8 !important;
-        }
-        .dark button, .dark .btn, .dark .group .text-white {
-            background: #2563eb !important;
-            color: #e0e7ef !important;
-        }
-        .dark button:hover, .dark .btn:hover {
-            background: #1e40af !important;
+        .dark .rounded-full {
+            border: 1.5px solid #38bdf8 !important;
         }
         @keyframes fade-in-up {
             0% { opacity: 0; transform: translateY(40px); }
@@ -114,14 +129,8 @@
         .animate-fade-in-up {
             animation: fade-in-up 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
         }
-        @keyframes spin-slow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 18s linear infinite;
-        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        /* Suppression des effets de rotation/inclinaison pour garder les éléments droits */
     </style>
     <script src="scripts/main.js"></script>
-</body>
-</html>

@@ -5,7 +5,6 @@ Ce projet est un site web de portfolio personnel, réalisé en HTML, CSS et Java
 ## Structure du projet
 - `index.html` : page d'accueil
 - `projets.html` : liste des projets
-- `a-propos.html` : page de présentation
 - `contact.html` : formulaire de contact
 - `styles/` : fichiers CSS
 - `scripts/` : fichiers JavaScript
@@ -21,4 +20,3 @@ Ouvrez le fichier `index.html` dans votre navigateur pour visualiser le site.
 ## À venir
 - Ajout de projets
 - Amélioration du design
-- Intégration d'un framework CSS (ex : Tailwind, Bootstrap)

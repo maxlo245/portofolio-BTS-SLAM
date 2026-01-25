@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - À propos</title>
+    <title>Mentions légales</title>
     <link rel="stylesheet" href="styles/main.css">
-
 </head>
 <body>
     <button id="dark-toggle" class="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" style="z-index:9999; display:block;">🌙 Mode sombre</button>
@@ -16,7 +15,6 @@
                 <li><a href="index.html" class="navlink">Accueil</a></li>
                 <li><a href="parcours.html" class="navlink">Parcours</a></li>
                 <li><a href="projets.html" class="navlink">Projets</a></li>
-                <li><a href="a-propos.html" class="navlink">À propos</a></li>
                 <li><a href="competences.html" class="navlink">Compétences</a></li>
                 <li><a href="cv.html" class="navlink">CV</a></li>
                 <li><a href="veille.html" class="navlink">Veille</a></li>
@@ -27,16 +25,23 @@
             </ul>
         </nav>
     </header>
-    <main class="relative min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 overflow-hidden flex flex-col items-center justify-center py-16">
-        <div class="absolute inset-0 pointer-events-none">
-            <!-- Effets de fond immersifs supprimés pour un rendu droit et professionnel -->
+    <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center gap-8 mt-24 mb-16">
+            <h1 class="text-6xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)] animate-fade-in-up text-center">Mentions légales</h1>
+            <p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 font-light animate-fade-in-up delay-200 text-center">Portfolio BTS SIO SLAM — Maxime Laurent</p>
         </div>
-        <div class="relative z-10 bg-white/80 rounded-3xl shadow-2xl border border-blue-100 p-12 max-w-2xl w-full flex flex-col items-center gap-6 animate-fade-in-up">
-            <h1 class="text-4xl font-black text-gray-900 drop-shadow-lg text-center">À propos de moi</h1>
-            <p class="text-lg text-gray-700 text-center">Présentation personnelle à compléter...</p>
-        </div>
+        <section class="w-full max-w-3xl mx-auto mt-8 mb-16 px-8 py-12 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl text-gray-700 dark:text-gray-300">
+            <h2 class="text-2xl font-bold mb-4">Éditeur du site</h2>
+            <p>Ce site est édité par Maxime Laurent.<br>Email : <a href="mailto:maximelaurent090@gmail.com" class="underline">maximelaurent090@gmail.com</a></p>
+            <h2 class="text-2xl font-bold mt-8 mb-4">Hébergement</h2>
+            <p>Le site est hébergé par l'utilisateur sur son propre espace.</p>
+            <h2 class="text-2xl font-bold mt-8 mb-4">Propriété intellectuelle</h2>
+            <p>Tous les contenus présents sur ce site sont la propriété de Maxime Laurent, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+            <h2 class="text-2xl font-bold mt-8 mb-4">Responsabilité</h2>
+            <p>L'éditeur du site s'efforce de fournir des informations exactes et à jour, mais ne saurait être tenu responsable des erreurs ou omissions.</p>
+        </section>
     </main>
-    <footer class="bg-white/80 border-t border-gray-200 text-gray-700 text-center py-6 shadow-inner backdrop-blur-xl">
+    <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-center py-6 shadow-inner backdrop-blur-xl">
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
             <span class="font-light">&copy; 2026 Portfolio BTS SIO SLAM</span>
             <a href="mentions-legales.html" class="underline hover:text-blue-600">Mentions légales</a>
@@ -45,7 +50,6 @@
             <a href="politique-confidentialite.html" class="underline hover:text-blue-600">Politique de confidentialité</a>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
     <style>
         .navlink {
             @apply text-gray-700 font-semibold px-2 py-1 rounded transition-all duration-300 hover:text-blue-600 hover:bg-blue-100 hover:shadow-md;
@@ -86,26 +90,14 @@
         .dark .text-gray-700, .dark .text-gray-900 {
             color: #e0e7ef !important;
         }
-        .dark .border-blue-100, .dark .border-gray-200 {
-            border-color: #334155 !important;
+        .dark .bg-gradient-to-r {
+            background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%) !important;
         }
-        .dark .border-blue-300, .dark .border-gray-700 {
-            border-color: #64748b !important;
+        .dark .bg-gradient-to-br {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%) !important;
         }
-        .dark input, .dark textarea {
-            background: #1e293b !important;
-            color: #e0e7ef !important;
-            border-color: #334155 !important;
-        }
-        .dark input:focus, .dark textarea:focus {
-            outline: 2px solid #38bdf8 !important;
-        }
-        .dark button, .dark .btn, .dark .group .text-white {
-            background: #2563eb !important;
-            color: #e0e7ef !important;
-        }
-        .dark button:hover, .dark .btn:hover {
-            background: #1e40af !important;
+        .dark .rounded-full {
+            border: 1.5px solid #38bdf8 !important;
         }
         @keyframes fade-in-up {
             0% { opacity: 0; transform: translateY(40px); }
@@ -114,13 +106,9 @@
         .animate-fade-in-up {
             animation: fade-in-up 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
         }
-        @keyframes spin-slow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 18s linear infinite;
-        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        /* Suppression des effets de rotation/inclinaison pour garder les éléments droits */
     </style>
     <script src="scripts/main.js"></script>
 </body>
