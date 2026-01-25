@@ -7,7 +7,6 @@ module.exports = {
     "./cv.html",
     "./competences.html",
     "./epreuves.html",
-    "./debouches.html",
     "./scripts/**/*.js"
   ],
   theme: {
