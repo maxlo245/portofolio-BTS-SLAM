@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <button id="dark-toggle" class="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" style="z-index:9999; display:block;">🌙 Mode sombre</button>
     <header class="backdrop-blur-xl bg-white/60 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-2xl sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO</span>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="navlink">Accueil</a></li>
-                <li><a href="parcours.html" class="navlink">Parcours</a></li>
-                <li><a href="projets.html" class="navlink">Projets</a></li>
-                <li><a href="competences.html" class="navlink">Compétences</a></li>
-                <li><a href="cv.html" class="navlink">CV</a></li>
-                <li><a href="veille.html" class="navlink">Veille</a></li>
-                <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
-                <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
-                <li><a href="debouches.html" class="navlink">Débouchés</a></li>
-                <li><a href="contact.html" class="navlink">Contact</a></li>
-            </ul>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="navlink">Accueil</a></li>
+                    <li><a href="parcours.html" class="navlink">Parcours</a></li>
+                    <li><a href="projets.html" class="navlink">Projets</a></li>
+                    <li><a href="competences.html" class="navlink">Compétences</a></li>
+                    <li><a href="cv.html" class="navlink">CV</a></li>
+                    <li><a href="certification.html" class="navlink">Certifications</a></li>
+                    <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
+                    <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
+                    <li><a href="debouches.html" class="navlink">Débouchés</a></li>
+                    <li><a href="contact.html" class="navlink">Contact</a></li>
+                </ul>
+                <button id="dark-toggle" class="ml-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" title="Changer de mode">🌙</button>
+            </div>
         </nav>
     </header>
     <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">

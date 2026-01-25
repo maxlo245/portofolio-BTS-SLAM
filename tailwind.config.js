@@ -6,7 +6,6 @@ module.exports = {
     "./contact.html",
     "./cv.html",
     "./competences.html",
-    "./veille.html",
     "./epreuves.html",
     "./debouches.html",
     "./scripts/**/*.js"

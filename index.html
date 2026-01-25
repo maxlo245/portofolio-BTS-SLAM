@@ -8,22 +8,25 @@
 
 </head>
 <body>
-    <button id="dark-toggle" class="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" style="z-index:9999; display:block;">🌙 Mode sombre</button>
+    <!-- Bouton mode sombre déplacé dans le header -->
     <header class="backdrop-blur-xl bg-white/60 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-2xl sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
             <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO</span>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="navlink">Accueil</a></li>
-                <li><a href="parcours.html" class="navlink">Parcours</a></li>
-                <li><a href="projets.html" class="navlink">Projets</a></li>
-                <li><a href="competences.html" class="navlink">Compétences</a></li>
-                <li><a href="cv.html" class="navlink">CV</a></li>
-                <li><a href="veille.html" class="navlink">Veille</a></li>
-                <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
-                <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
-                <li><a href="debouches.html" class="navlink">Débouchés</a></li>
-                <li><a href="contact.html" class="navlink">Contact</a></li>
-            </ul>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="navlink">Accueil</a></li>
+                    <li><a href="parcours.html" class="navlink">Parcours</a></li>
+                    <li><a href="projets.html" class="navlink">Projets</a></li>
+                    <li><a href="competences.html" class="navlink">Compétences</a></li>
+                    <li><a href="cv.html" class="navlink">CV</a></li>
+                    <li><a href="certification.html" class="navlink">Certifications</a></li>
+                    <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
+                    <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
+                    <li><a href="debouches.html" class="navlink">Débouchés</a></li>
+                    <li><a href="contact.html" class="navlink">Contact</a></li>
+                </ul>
+                <button id="dark-toggle" class="ml-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" title="Changer de mode">🌙</button>
+            </div>
         </nav>
     </header>
     <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
@@ -31,10 +34,6 @@
         <div class="relative z-10 flex flex-col items-center gap-8 mt-24 mb-16">
             <h1 class="text-6xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)] animate-fade-in-up text-center">Bienvenue</h1>
             <p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 font-light animate-fade-in-up delay-200 text-center">Portfolio BTS SIO SLAM — Maxime Laurent</p>
-            <a href="projets.html" class="group relative inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white font-bold rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-200 animate-fade-in-up delay-400 text-center">
-                <span class="relative z-10">Voir mes projets</span>
-                <span class="absolute inset-0 rounded-full bg-white/10 dark:bg-gray-700/30 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
-            </a>
         </div>
         <!-- Paragraphe À propos intégré -->
         <!-- Bloc effet 3D immersif supprimé pour plus de sobriété -->
