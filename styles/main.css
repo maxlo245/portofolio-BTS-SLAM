@@ -1,3 +1,7 @@
+/* Correction modale : garantir que .hidden masque toujours l'élément */
+.hidden {
+	display: none !important;
+}
 /* Frise chronologique verticale pour parcours */
 .timeline {
 	position: relative;

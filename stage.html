@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Stages</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Prism.js pour coloration syntaxique -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+    <script src="scripts/code-modal.js" defer></script>
+</head>
+<body>
+    <header class="backdrop-blur-xl bg-white/60 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-2xl sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO</span>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="navlink">Accueil</a></li>
+                    <li><a href="parcours.html" class="navlink">Parcours</a></li>
+                    <li><a href="projets.html" class="navlink">Projets</a></li>
+                    <li><a href="competences.html" class="navlink">Compétences</a></li>
+                    <li><a href="cv.html" class="navlink">CV</a></li>
+                    <li><a href="certification.html" class="navlink">Certifications</a></li>
+                    <li><a href="stage.html" class="navlink navlink-active">Stages</a></li>
+                    <li><a href="veille-technologique.html" class="navlink">Veille technologique</a></li>
+                    <li><a href="epreuves.html" class="navlink">Épreuves BTS</a></li>
+                    <li><a href="debouches.html" class="navlink">Débouchés</a></li>
+                    <li><a href="contact.html" class="navlink">Contact</a></li>
+                </ul>
+                <button id="dark-toggle" class="ml-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" title="Changer de mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+    <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center gap-8 mt-24 mb-16">
+            <h1 class="text-6xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)] animate-fade-in-up text-center">Mes Stages</h1>
+            <p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 font-light animate-fade-in-up delay-200 text-center">Retrouvez ici le détail de mes stages réalisés durant le BTS SIO SLAM.</p>
+        </div>
+        <section class="w-full max-w-3xl mx-auto mt-8 mb-16 px-8 py-12 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl text-gray-700 dark:text-gray-300 overflow-y-auto max-h-screen">
+                        <hr class="my-8 border-blue-200 dark:border-blue-700">
+                        <h2 class="text-2xl font-bold mb-4">Stage : Automatisation d'extraction et de traitement documentaire</h2>
+                        <div class="flex flex-col gap-4 mb-6">
+                            <ul class="list-disc list-inside mb-2">
+                                <li>
+                                    <strong>extrationdocumentcategoriecolonnegpex.py</strong> : Extraction de références et d'indices depuis un tableau Word, recherche et export des données associées depuis un fichier Excel.
+                                    <br><a href="../Desktop/stage/fichier%20pret/extrationdocumentcategoriecolonnegpex.py" class="text-blue-600 underline" target="_blank">Télécharger le code</a>
+                                    <div class="mt-2">
+                                        <button onclick="openModal('modal1')" class="text-blue-700 dark:text-blue-300 font-semibold underline mt-2">Aperçu du code</button>
+                                        <div id="modal1" class="fixed inset-0 z-50 hidden" style="backdrop-filter: blur(6px); background: rgba(20,20,30,0.7);" tabindex="-1">
+                                            <div class="fixed inset-0 w-full h-full rounded-none shadow-2xl bg-gray-900 border-0 flex flex-col" role="dialog" aria-modal="true">
+                                                <div class="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-700">
+                                                    <span class="text-base font-semibold text-white">extrationdocumentcategoriecolonnegpex.py</span>
+                                                    <button id="close-modal1" class="text-gray-400 hover:text-red-400 text-2xl font-bold focus:outline-none" aria-label="Fermer">&times;</button>
+                                                </div>
+                                                <div class="flex-1 px-6 py-4 overflow-x-auto overflow-y-auto" style="padding-bottom: 7rem;">
+                                                    <pre class="language-python line-numbers text-sm" style="white-space: pre; background: transparent; height:100%; max-height:calc(100vh - 7rem); overflow-y:auto;"><code class="language-python">
+
+                # Ligne de départ forcée à 3 pour colonnes E-H et I-L
+                ligne_ref = 3
+
+                for ref, texte_complet in dict_refs.items():
+                    ref_extraite = nettoyer_reference(ref)
+                    indice_extraite = ""
+
+                    match_colle = regex_indice_colle.search(ref_extraite)
+                    match_texte = regex_indice_texte.search(texte_complet)
+                    if match_colle:
+                        indice_extraite = match_colle.group(1)
+                        ref_extraite = regex_indice_colle.sub("", ref_extraite)
+                    elif match_texte:
+                        indice_extraite = match_texte.group(1)
+
+                    if not contient_supprime(texte_complet):
+                        for col in range(5, 9):
+                            cell = ws.cell(row=ligne_ref, column=col)
+                            cell.alignment = Alignment(vertical='top', horizontal='left', wrap_text=True)
+
+                        ws.cell(row=ligne_ref, column=5, value=texte_complet)
+                        ws.cell(row=ligne_ref, column=6, value=ref_extraite)
+                        ws.cell(row=ligne_ref, column=7, value=indice_extraite)
+                        ws.cell(row=ligne_ref, column=8, value="")
+
+                        ws.row_dimensions[ligne_ref].height = 40
+                        ligne_ref += 1
+
+                ligne_bib = ligne_ref
+                for bib_id, (txt_bib, bib_ref) in dict_bib.items():
+                    if not contient_supprime(txt_bib):
+                        for col in range(9, 13):
+                            cell = ws.cell(row=ligne_bib, column=col)
+                            cell.alignment = Alignment(vertical='top', horizontal='left', wrap_text=True)
+
+                        ws.cell(row=ligne_bib, column=9, value=txt_bib)
+                        ws.cell(row=ligne_bib, column=10, value=bib_ref)
+                        ws.cell(row=ligne_bib, column=11, value="")
+                        ws.cell(row=ligne_bib, column=12, value="")
+
+                        ws.row_dimensions[ligne_bib].height = 40
+                        ligne_bib += 1
+
+                ajuster_largeur_colonnes(ws)
+
+                wb.save(excel_final_path)
+                print(f"Fichier Excel final enregistré sous : {excel_final_path}")
+
+            if __name__ == "__main__":
+                chemin_docx = r"C:\Users\i22185\Documents\dm2test.docx"
+                chemin_excel_source = r"C:\Users\i22185\Desktop\LDA DOC pour Maxime.xlsx"
+                chemin_excel_final = r"C:\Users\i22185\Desktop\resultat docx\resultat python extration.xlsx"
+
+                extraire_references_et_bibliographie(chemin_docx, chemin_excel_source, chemin_excel_final)
+                                              </code></pre>
+                                            </div>
+                                          </div>
+                                        </div>
+                <!-- Visualizer 2 : autre script Python -->
+                <div class="mt-8">
+                    <p class="mb-2">Voici un second script Python utilisé pour automatiser le traitement documentaire :</p>
+                    <li class="mt-8">
+                        <strong>script_traitement_fichiers.py</strong> : Copie automatisée de fichiers d'un dossier source vers un dossier de destination, utile pour la gestion documentaire.
+                        <br><a href="../Desktop/stage/fichier%20pret/script_traitement_fichiers.py" class="text-blue-600 underline" target="_blank">Télécharger le code</a>
+                        <div class="mt-2">
+                            <button onclick="openModal('modal2')" class="text-blue-700 dark:text-blue-300 font-semibold underline mt-2">Aperçu du code</button>
+                            <div id="modal2" class="fixed inset-0 z-50 hidden" style="backdrop-filter: blur(6px); background: rgba(20,20,30,0.7);" tabindex="-1">
+                                <div class="fixed inset-0 w-full h-full rounded-none shadow-2xl bg-gray-900 border-0 flex flex-col" role="dialog" aria-modal="true">
+                                    <div class="flex items-center justify-between px-6 pt-6 pb-4 border-b border-gray-700">
+                                        <span class="text-base font-semibold text-white">script_traitement_fichiers.py</span>
+                                        <button id="close-modal2" class="text-gray-400 hover:text-red-400 text-2xl font-bold focus:outline-none" aria-label="Fermer">&times;</button>
+                                    </div>
+                                    <div class="flex-1 px-6 py-4 overflow-x-auto overflow-y-auto" style="padding-bottom: 7rem;">
+<pre class="language-python line-numbers text-sm" style="white-space: pre; background: transparent; height:100%; max-height:calc(100vh - 7rem); overflow-y:auto;"><code class="language-python">import os
+import shutil
+
+def copier_fichiers(source, destination):
+    if not os.path.exists(destination):
+        os.makedirs(destination)
+    for fichier in os.listdir(source):
+        chemin_fichier = os.path.join(source, fichier)
+        if os.path.isfile(chemin_fichier):
+            shutil.copy2(chemin_fichier, destination)
+
+if __name__ == "__main__":
+    dossier_source = r"C:\\Users\\maxim\\Documents\\source"
+    dossier_destination = r"C:\\Users\\maxim\\Documents\\destination"
+    copier_fichiers(dossier_source, dossier_destination)
+    print("Copie terminée.")
+</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>Ces outils facilitent le traitement documentaire et l'automatisation de tâches répétitives pour la gestion de références techniques.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Bloc suivant conservé : Armoni Solutions -->
+        <h2 class="text-2xl font-bold mb-4">Stage : Création du site web Armoni Solutions</h2>
+        <div class="flex flex-col gap-4 mb-6">
+            <a href="https://www.armoni-solutions.fr" target="_blank" class="text-blue-600 underline font-semibold text-lg">www.armoni-solutions.fr</a>
+            <p>Ce site présente Armoni Solutions, une entreprise qui accompagne les professionnels de l'événementiel et de la restauration dans le conseil, l'analyse et le développement d'activité.</p>
+            <p>Il met en avant les services sur mesure proposés pour aider les entreprises à se structurer, se développer et améliorer leur performance grâce à un réseau d'experts.</p>
+        </div>
+    </main>
+    <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-center py-6 shadow-inner backdrop-blur-xl">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+            <span class="font-light">&copy; 2026 Portfolio BTS SIO SLAM</span>
+            <a href="mentions-legales.html" class="underline hover:text-blue-600">Mentions légales</a>
+            <a href="mailto:maximelaurent090@gmail.com" class="underline hover:text-blue-600">maximelaurent090@gmail.com</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" class="underline hover:text-blue-600">Instagram</a>
+            <a href="politique-confidentialite.html" class="underline hover:text-blue-600">Politique de confidentialité</a>
+        </div>
+    </footer>
+    <style>
+        .navlink {
+            @apply text-gray-700 font-semibold px-2 py-1 rounded transition-all duration-300 hover:text-blue-600 hover:bg-blue-100 hover:shadow-md;
+        }
+        .dark .navlink {
+            color: #e0e7ef;
+            background: transparent;
+        }
+        .dark .navlink:hover {
+            color: #60a5fa;
+            background: #1e293b;
+            box-shadow: 0 2px 8px #0ea5e9cc;
+        }
+        .dark main, .dark body {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%) !important;
+        }
+        .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark li, .dark label, .dark a, .dark .font-black, .dark .font-bold, .dark .font-light, .dark .font-semibold {
+            color: #e0e7ef !important;
+        }
+        .dark .bg-white\/80, .dark .bg-white\/60 {
+            background: #1e293bcc !important;
+        }
+        .dark .shadow-2xl, .dark .shadow-xl, .dark .shadow-lg, .dark .shadow-inner {
+            box-shadow: 0 8px 32px #000a, 0 1.5px 4px #0ea5e9cc;
+        }
+        .dark .rounded-3xl, .dark .rounded-full {
+            border-color: #334155 !important;
+        }
+        .dark .group .bg-white\/10 {
+            background: #33415533 !important;
+        }
+        .dark .focus\:ring-4:focus {
+            box-shadow: 0 0 0 4px #2563eb99;
+        }
+        .dark .text-blue-600, .dark .text-blue-700, .dark .text-blue-800 {
+            color: #38bdf8 !important;
+        }
+        .dark .text-gray-700, .dark .text-gray-900 {
+            color: #e0e7ef !important;
+        }
+        .dark .bg-gradient-to-r {
+            background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%) !important;
+        }
+        .dark .bg-gradient-to-br {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%) !important;
+        }
+        .dark .rounded-full {
+            border: 1.5px solid #38bdf8 !important;
+        }
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        /* Suppression des effets de rotation/inclinaison pour garder les éléments droits */
+    </style>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
