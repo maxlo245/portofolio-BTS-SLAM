@@ -1,3 +1,60 @@
+/* Sous-menus déroulants pour la navigation principale */
+.group {
+	position: relative;
+}
+.group > a::after {
+	content: " ▼";
+	font-size: 0.7em;
+	color: #60a5fa;
+	transition: transform 0.2s;
+}
+.group:hover > a::after,
+.group:focus-within > a::after {
+	transform: rotate(-180deg);
+}
+.group ul {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(10px) scale(0.98);
+	transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+	min-width: 160px;
+	background: #fff;
+	border-radius: 0.75rem;
+	box-shadow: 0 8px 32px rgba(37,99,235,0.15), 0 1.5px 6px rgba(0,0,0,0.07);
+	padding: 0.5rem 0;
+	z-index: 100;
+}
+.dark .group ul {
+	background: #1e293b;
+	box-shadow: 0 8px 32px rgba(59,130,246,0.18), 0 1.5px 6px rgba(0,0,0,0.18);
+}
+.group:hover > ul,
+.group:focus-within > ul {
+	opacity: 1 !important;
+	visibility: visible !important;
+	pointer-events: auto;
+	transform: translateY(0) scale(1);
+}
+.group ul li a {
+	display: block;
+	padding: 0.5rem 1.25rem;
+	color: #374151;
+	font-weight: 500;
+	border-radius: 0.5rem;
+	transition: background 0.2s, color 0.2s;
+}
+.group ul li a:hover {
+	background: #e0e7ef;
+	color: #2563eb;
+}
+.dark .group ul li a {
+	color: #e0e7ef;
+}
+.dark .group ul li a:hover {
+	background: #2563eb;
+	color: #fff;
+}
 /* Correction modale : garantir que .hidden masque toujours l'élément */
 .hidden {
 	display: none !important;
