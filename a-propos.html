@@ -2,15 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <script>
+        if (localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - À propos</title>
     <link rel="stylesheet" href="styles/main.css">
-
 </head>
 <body>
     <header class="backdrop-blur-xl bg-white/60 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-2xl sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-            <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO</span>
+            <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO Maxime Laurent</span>
             <div class="flex items-center space-x-6">
                 <ul class="flex space-x-6">
                     <li class="relative group">
