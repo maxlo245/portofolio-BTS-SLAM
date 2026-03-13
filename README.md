@@ -1,5 +1,7 @@
 # Portfolio Personnel
 
+> © 2026 Maxime Laurent — Tous droits réservés. Toute reproduction sans autorisation écrite est interdite. Voir le fichier [LICENSE](LICENSE).
+
 Ce projet est un site web de portfolio personnel, réalisé en HTML, CSS et JavaScript.
 
 ## Structure du projet
