@@ -22,3 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Appliquer le thème dès le chargement du script (pour éviter le flash)
 updateTheme();
+
+// Protection anti-copie
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && ['u', 's', 'a', 'c'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
