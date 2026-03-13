@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Cybersécurité - Portfolio BTS SIO SLAM</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="backdrop-blur-xl bg-white/60 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-2xl sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <span class="text-gray-900 text-2xl font-black tracking-widest drop-shadow-[0_2px_8px_rgba(0,0,0,0.15)] select-none">PORTFOLIO Maxime Laurent</span>
+            <div class="flex items-center space-x-6">
+                <ul class="flex space-x-6">
+                    <li class="relative group">
+                        <a href="index.html" class="navlink">Accueil</a>
+                        <ul class="absolute left-0 mt-2 w-40 bg-white dark:bg-gray-900 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 invisible group-hover:visible">
+                            <li><a href="index.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Accueil</a></li>
+                            <li><a href="parcours.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Parcours</a></li>
+                            <li><a href="cv.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">CV</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projets.html" class="navlink">Projets</a></li>
+                    <li class="relative group">
+                        <a href="competences.html" class="navlink">Compétences</a>
+                        <ul class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 invisible group-hover:visible">
+                            <li><a href="competences.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Compétences</a></li>
+                            <li><a href="bts-sio.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">BTS SIO</a></li>
+                            <li><a href="certification.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Certification</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stage.html" class="navlink">Stages</a></li>
+                    <li class="relative group">
+                        <a href="veille-technologique.html" class="navlink">Veille</a>
+                        <ul class="absolute left-0 mt-2 w-52 bg-white dark:bg-gray-900 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 invisible group-hover:visible">
+                            <li><a href="veille-technologique.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Veille technologique</a></li>
+                            <li><a href="veille-cybersecurite.html" class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-gray-800">Veille cybersécurité</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="navlink">Contact</a></li>
+                </ul>
+                <button id="dark-toggle" class="ml-4 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md transition-all duration-300 focus:outline-none" title="Changer de mode">🌙</button>
+            </div>
+        </nav>
+    </header>
+    <main class="relative flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center gap-8 mt-24 mb-16">
+            <h1 class="text-6xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.12)] animate-fade-in-up text-center">Veille cybersécurité</h1>
+            <section class="w-full max-w-3xl mx-auto mt-8 mb-16 bg-white/80 dark:bg-gray-900/80 rounded-3xl shadow-2xl text-gray-700 dark:text-gray-300" style="display:flex;flex-direction:column;gap:2.5rem;padding:3rem 3.5rem;">
+
+                <!-- Bloc 1 : Failles de sécurité -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4" style="color:#1e40af;">Les failles de sécurité</h2>
+                    <p class="mb-3">Une <strong>faille de sécurité</strong>, ou vulnérabilité, est une faiblesse présente dans un système informatique, un logiciel ou un protocole réseau susceptible d'être exploitée par un acteur malveillant afin de compromettre la confidentialité, l'intégrité ou la disponibilité des données.</p>
+                    <p class="mb-3">Les vulnérabilités sont recensées dans un référentiel mondial : le système <strong>CVE (Common Vulnerabilities and Exposures)</strong>. Chaque entrée se voit attribuer un identifiant unique — tel que <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">CVE-2026-20127</code> — ainsi qu'un indice de criticité <strong>CVSS</strong> compris entre 0 et 10, permettant d'évaluer la sévérité de la menace.</p>
+                    <p class="mb-3">On distingue plusieurs catégories de vulnérabilités :</p>
+                    <ul class="list-disc list-inside mb-3 space-y-1">
+                        <li><strong>Injection</strong> (SQL, commandes système) : insertion de code malveillant au sein d'une entrée insuffisamment filtrée.</li>
+                        <li><strong>Défaillance d'authentification</strong> : contournement des mécanismes de contrôle d'accès ou d'identification.</li>
+                        <li><strong>Élévation de privilèges</strong> : obtention de droits supérieurs à ceux normalement accordés à un utilisateur.</li>
+                        <li><strong>Déni de service (DoS/DDoS)</strong> : saturation d'un service dans le but de le rendre indisponible.</li>
+                        <li><strong>Vulnérabilité zero-day</strong> : faille inconnue de l'éditeur, exploitée avant la publication de tout correctif.</li>
+                    </ul>
+                    <p>Dès qu'une vulnérabilité est identifiée, les éditeurs publient des <strong>correctifs (patches)</strong> qu'il convient d'appliquer dans les meilleurs délais, en particulier lorsque la faille fait l'objet d'une exploitation active.</p>
+                </div>
+
+                <!-- Séparateur -->
+                <hr style="border:none;border-top:1px solid #e2e8f0;">
+
+                <!-- Bloc 2 : ANSSI et CERT-FR -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4" style="color:#1e40af;">L'ANSSI et le CERT-FR</h2>
+                    <p class="mb-3">L'<strong>ANSSI</strong> (Agence nationale de la sécurité des systèmes d'information) constitue l'autorité nationale française en matière de cybersécurité. Rattachée au Secrétariat général de la défense et de la sécurité nationale (SGDSN), elle opère sous l'autorité du Premier ministre.</p>
+                    <p class="mb-3">Ses principales missions sont les suivantes :</p>
+                    <ul class="list-disc list-inside mb-3 space-y-1">
+                        <li>Assurer la défense des systèmes d'information de l'État et des opérateurs d'importance vitale (OIV).</li>
+                        <li>Élaborer des recommandations et des guides de bonnes pratiques en matière de sécurité numérique.</li>
+                        <li>Former et sensibiliser les acteurs publics et privés aux enjeux de la cybersécurité.</li>
+                        <li>Coordonner la réponse aux incidents de sécurité d'envergure nationale (CSIRT gouvernemental).</li>
+                    </ul>
+                    <p class="mb-3">Le <strong>CERT-FR</strong> (Computer Emergency Response Team – France) est le centre gouvernemental de veille, d'alerte et de réponse aux cyberattaques, opéré par l'ANSSI. Il publie régulièrement trois types de documents :</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Des alertes</strong> : signalement de vulnérabilités critiques activement exploitées, nécessitant une action corrective immédiate.</li>
+                        <li><strong>Des avis</strong> : informations relatives à de nouvelles vulnérabilités, accompagnées de recommandations de mise à jour.</li>
+                        <li><strong>Des bulletins d'actualité</strong> : synthèse hebdomadaire des menaces et incidents de sécurité récents.</li>
+                    </ul>
+                </div>
+
+                <!-- Séparateur -->
+                <hr style="border:none;border-top:1px solid #e2e8f0;">
+
+                <!-- Bloc 3 : Alerte CERT-FR CERTFR-2026-ALE-002 -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4" style="color:#1e40af;">Analyse d'une alerte : CERTFR-2026-ALE-002</h2>
+                    <div class="alert-info-box" style="background:#eff6ff;border-left:4px solid #2563eb;border-radius:8px;padding:1rem 1.25rem;margin-bottom:1rem;">
+                        <p class="font-bold mb-1">Vulnérabilité dans Cisco Catalyst SD-WAN — <span style="color:#dc2626;">Exploitation active confirmée</span></p>
+                        <p class="text-sm" style="color:#475569;">Référence : CERTFR-2026-ALE-002 &nbsp;·&nbsp; Première publication : 25 février 2026 &nbsp;·&nbsp; Mise à jour : 26 février 2026</p>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Présentation</h3>
+                    <p class="mb-3">Une vulnérabilité critique, référencée <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">CVE-2026-20127</code>, a été identifiée dans la solution <strong>Cisco Catalyst SD-WAN</strong>, un système de réseau étendu défini par logiciel (SD-WAN) largement déployé en environnement d'entreprise. Cette vulnérabilité permet à un attaquant de <strong>contourner la politique de sécurité</strong> en vigueur. Cisco a confirmé son exploitation active dans la nature au moment de la publication de l'alerte.</p>
+
+                    <h3 class="text-lg font-semibold mb-2">Systèmes affectés</h3>
+                    <ul class="list-disc list-inside mb-3 space-y-1">
+                        <li>Catalyst SD-WAN versions 20.12.5.x antérieures à 20.12.5.3</li>
+                        <li>Catalyst SD-WAN versions 20.12.6.x antérieures à 20.12.6.1</li>
+                        <li>Catalyst SD-WAN versions 20.15.x antérieures à 20.15.4.2</li>
+                        <li>Catalyst SD-WAN versions 20.18.x antérieures à 20.18.2.1</li>
+                        <li>Catalyst SD-WAN versions antérieures à 20.9.8.2</li>
+                        <li class="no-patch-warning">Les branches 20.11.x, 20.13.x, 20.14.x et 20.16.x sont également concernées, mais ne bénéficieront d'aucun correctif, ces versions ayant atteint leur fin de maintenance.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold mb-2">Indicateurs de compromission</h3>
+                    <p class="mb-2">Le CERT-FR, en collaboration avec Cisco Talos, a documenté plusieurs indicateurs permettant de détecter une compromission potentielle :</p>
+                    <ul class="list-disc list-inside mb-3 space-y-1">
+                        <li>Événements d'appairage de connexions de contrôle (control connection peering) vers des adresses IP non répertoriées dans l'architecture.</li>
+                        <li>Ajout de clés SSH non reconnues sur le compte <code style="background:#f1f5f9;padding:2px 6px;border-radius:4px;">vmanage-admin</code>.</li>
+                        <li>Rétrogradation de la version du système, susceptible de permettre l'exploitation de vulnérabilités plus anciennes telles que la CVE-2022-20775.</li>
+                        <li>Journaux système tronqués, effacés ou présentant une taille anormalement faible.</li>
+                        <li>Création de comptes utilisateurs suspects ou présence de sessions root non planifiées.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-semibold mb-2">Mesures correctives recommandées</h3>
+                    <p class="mb-3">Il est recommandé d'appliquer sans délai les correctifs publiés par Cisco. Pour les versions arrivées en fin de maintenance, une migration vers une version activement supportée s'impose. En cas de suspicion de compromission, une investigation approfondie doit être conduite en s'appuyant sur les guides officiels fournis par Cisco et l'Australian Cyber Security Centre.</p>
+
+                    <a href="https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-002/" target="_blank" rel="noopener noreferrer"
+                       style="display:inline-block;background:#2563eb;color:#fff;padding:0.5rem 1.25rem;border-radius:8px;font-weight:600;text-decoration:none;margin-top:0.5rem;">
+                        Consulter l'alerte officielle CERT-FR
+                    </a>
+                </div>
+
+                <!-- Séparateur -->
+                <hr style="border:none;border-top:1px solid #e2e8f0;">
+
+                <!-- Bloc 4 : Méthode de veille -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-4" style="color:#1e40af;">Méthodologie de veille</h2>
+                    <p class="mb-3">Afin de rester informé des évolutions en matière de menaces et de vulnérabilités, je consulte de manière régulière plusieurs sources officielles et spécialisées :</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>CERT-FR (cert.ssi.gouv.fr)</strong> : alertes et avis de sécurité émis par l'ANSSI.</li>
+                        <li><strong>CVE.org et NVD (NIST)</strong> : base de données de référence mondiale des vulnérabilités connues.</li>
+                        <li><strong>Cisco Talos et blogs éditeurs</strong> : analyses techniques approfondies portant sur les campagnes d'exploitation en cours.</li>
+                        <li><strong>OWASP</strong> : référentiel de bonnes pratiques pour la sécurité des applications web.</li>
+                        <li><strong>Plateformes CTF (Capture The Flag)</strong> : exercices pratiques permettant d'approfondir les compétences en cybersécurité dans un cadre encadré.</li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <footer class="bg-white/80 dark:bg-gray-900/80 border-t border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-center py-6 shadow-inner backdrop-blur-xl">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+            <span class="font-light">&copy; 2026 Portfolio BTS SIO SLAM Maxime Laurent</span>
+            <a href="mentions-legales.html" class="underline hover:text-blue-600">Mentions légales</a>
+            <a href="mailto:maximelaurent090@gmail.com" class="underline hover:text-blue-600">maximelaurent090@gmail.com</a>
+            <a href="politique-confidentialite.html" class="underline hover:text-blue-600">Politique de confidentialité</a>
+        </div>
+    </footer>
+    <style>
+        .navlink {
+            @apply text-gray-700 font-semibold px-2 py-1 rounded transition-all duration-300 hover:text-blue-600 hover:bg-blue-100 hover:shadow-md;
+        }
+        .dark .navlink {
+            color: #e0e7ef;
+            background: transparent;
+        }
+        .dark .navlink:hover {
+            color: #60a5fa;
+            background: #1e293b;
+            box-shadow: 0 2px 8px #0ea5e9cc;
+        }
+        .dark main, .dark body {
+            background: linear-gradient(135deg, #111827 0%, #1e293b 100%) !important;
+        }
+        .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark li, .dark label, .dark a, .dark .font-black, .dark .font-bold, .dark .font-light, .dark .font-semibold {
+            color: #e0e7ef !important;
+        }
+        .dark .bg-white\/80, .dark .bg-white\/60 {
+            background: #1e293bcc !important;
+        }
+        .dark .shadow-2xl, .dark .shadow-xl, .dark .shadow-lg, .dark .shadow-inner {
+            box-shadow: 0 8px 32px #000a, 0 1.5px 4px #0ea5e9cc;
+        }
+        .dark .rounded-3xl, .dark .rounded-full {
+            border-color: #334155 !important;
+        }
+        .dark .group .bg-white\/10 {
+            background: #33415533 !important;
+        }
+        .dark .focus\:ring-4:focus {
+            box-shadow: 0 0 0 4px #2563eb99;
+        }
+        .dark .text-blue-600, .dark .text-blue-700, .dark .text-blue-800 {
+            color: #38bdf8 !important;
+        }
+        .dark .text-gray-700, .dark .text-gray-900 {
+            color: #e0e7ef !important;
+        }
+        .dark .border-blue-100, .dark .border-gray-200 {
+            border-color: #334155 !important;
+        }
+        .dark .border-blue-300, .dark .border-gray-700 {
+            border-color: #64748b !important;
+        }
+        .dark input, .dark textarea {
+            background: #1e293b !important;
+            color: #e0e7ef !important;
+            border-color: #334155 !important;
+        }
+        .dark input:focus, .dark textarea:focus {
+            outline: 2px solid #38bdf8 !important;
+        }
+        .dark button, .dark .btn, .dark .group .text-white {
+            background: #2563eb !important;
+            color: #e0e7ef !important;
+        }
+        .dark button:hover, .dark .btn:hover {
+            background: #1e40af !important;
+        }
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+        }
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 18s linear infinite;
+        }
+        .dark .alert-info-box {
+            background: #1e3a5f !important;
+            border-left-color: #60a5fa !important;
+        }
+        .dark .alert-info-box p, .dark .alert-info-box span {
+            color: #e0e7ef !important;
+        }
+        code {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+        .dark code {
+            background: #334155 !important;
+            color: #e0e7ef !important;
+        }
+        .no-patch-warning {
+            color: #dc2626;
+        }
+        .dark .no-patch-warning {
+            color: #fca5a5 !important;
+        }
+    </style>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
